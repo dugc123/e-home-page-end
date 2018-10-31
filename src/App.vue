@@ -68,6 +68,7 @@ export default {
     height:.8rem;
     line-height: .8rem;
     color:#888;
+    font-size: 14px;
 }
 
 </style>

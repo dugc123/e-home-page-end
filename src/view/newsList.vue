@@ -19,9 +19,10 @@
                 </div>
             </div>
             </router-link>
+            <div class="bottom-text" v-show="!isShow">没有更多数据了</div>
     </div>
     </mt-loadmore>
-    <div class="bottom-text" v-show="!isShow">没有更多数据了</div>
+    
 </div>
 </template>
 
@@ -56,7 +57,6 @@ methods: {
         .then(res => {
             if (res.code == 1) {
                 this.page = 1;
-                this.allLoaded = false;
                 this.newsList = res.rows
                 this.$refs.loadmore.onTopLoaded();
             }
@@ -93,6 +93,7 @@ methods: {
                 if (res.rows.length < 10) {
                     this.allLoaded = true  //禁止上拉加载
                     this.isShow = false
+                    this.loadMore.prevent()
                 }
             }
         }).catch(error => {
@@ -118,7 +119,7 @@ mounted () {
     font-size: 14px;
 }
 .newlist{
-
+    min-height: 100vh;
     a {
         display: block;
     }

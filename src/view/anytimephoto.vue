@@ -4,6 +4,7 @@
             <img :src="item.pic">
             <div>{{item.title}}</div>
         </router-link>
+        <div class="bottom-text">没有更多数据了</div>
 </div>
 </template>
 

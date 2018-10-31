@@ -94,11 +94,11 @@ created () {
 
 <style scoped lang="scss">
 .page{
-    min-height: 100vh;
-    overflow: scroll;
+    // overflow: scroll;
     font-size: 14px;
 }
 .userlist{
+    margin-top: .9rem;
     .item{
     display: flex;
     height: 1.01rem;
