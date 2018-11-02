@@ -102,11 +102,6 @@ export default {
             if (res.code == 1) {
                 this.commentList.comment = ''
                 this.getData()
-                Toast({
-                        message: res.msg,
-                        position: 'middle',
-                        duration: 1500
-                        });
             }else{
                 Toast({
                         message: res.msg,
@@ -116,21 +111,21 @@ export default {
             }
         })
     }
- },
- mounted() {
-     this.getuserData()
-     this.getData()
- }
+    },
+    mounted() {
+        this.getuserData()
+        this.getData()
+    }
 }
 </script>
 
 <style scoped lang="scss">
 .interaction{
-      overflow: scroll;
+    overflow: scroll;
     font-size: 14px;
     min-height: 100vh;
     background-color: #eee;
-  .item {
+    .item {
     margin: 0 auto;
     background-color: #fff;
     width: 7.14rem;
@@ -139,10 +134,10 @@ export default {
     padding: 16px;
     color: #333;
     border-bottom: .2rem solid #eee;
-  }
-   .contents {
-      padding: 0.2rem 0;
-      font-size: 16px;
+    }
+    .contents {
+        padding: 0.2rem 0;
+        font-size: 16px;
     }
     .comment{
         position: fixed;
@@ -180,23 +175,23 @@ export default {
         color: #333;
         border-bottom: .2rem solid #eee;
     }
-     .top {
-      img {
+    .top {
+    img {
         width: .8rem;
         height: .8rem;
         border-radius: 50%;
         float: left;
-      }
-      .nickname {
+    }
+    .nickname {
         font-size: 18px;
         margin-left: 0.2rem;
         float: left;
-      }
-      .time {
+    }
+    .time {
         font-size: 12px;
         margin-left: 1rem;
         padding-top: 0.6rem;
-      }
+    }
     }
     .bottom-text{
         margin-bottom: 1rem;

@@ -7,7 +7,7 @@
     </div>
     <form class="form" @submit.prevent>
         <div class="input-wrap">
-            <input type="text" placeholder="身份证号" v-model="formData.id_card">
+            <input type="tel" placeholder="身份证号" v-model="formData.id_card">
         </div>
         <div class="input-wrap">
             <input type="password" placeholder="密码" v-model="formData.password" @keydown.enter.native="handleLogin" >
