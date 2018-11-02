@@ -19,8 +19,6 @@
     data()
     {
       return{
-        imgUrl:"",
-        size: 0,
       }
     },
     methods:{
@@ -41,7 +39,8 @@
         reader.onload = function (e){
           // 读取到的图片base64 数据编码 将此编码字符串传给后台即可
           var imgcode = e.target.result;
-        
+          // console.log(e)
+
           var nativeCode=imgcode;
           // console.log(nativeCode)
           
@@ -71,6 +70,5 @@
     height:45px;
     border: 1px solid #fff;
     border-radius:6px;
-
   }
 </style>

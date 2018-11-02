@@ -33,7 +33,6 @@ methods: {
         getIMGURL(params){
             this.img_list.push(params);
             this.subList.pic_list = this.img_list.join(",")
-
         },
         Base64(base64){
             this.imgURL=base64;

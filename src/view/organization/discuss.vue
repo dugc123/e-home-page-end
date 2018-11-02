@@ -20,7 +20,6 @@
         </select>
         <button @click="handleBtn">下一步</button>
      </div>
-
  </div>
 </template>
 
@@ -40,7 +39,7 @@ methods: {
             }
         })
     },
-    changeOption(event){        //得到option中的id
+    changeOption(event){  //得到option中的id
         this.optionActive = event.target.value;
     },
     handleBtn(){

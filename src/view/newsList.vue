@@ -72,8 +72,8 @@ methods: {
         .then(res => {
             // concat数组的追加
             this.newsList = this.newsList.concat(res.rows);
-            if (res.rows.length < 10) {
-                this.allLoaded = true; // 若数据已全部获取完毕
+            if (res.rows.length < 10) { // 若数据已全部获取完毕
+                this.allLoaded = true; 
                 this.isShow = false
             }
             this.$refs.loadmore.onBottomLoaded();
@@ -93,7 +93,6 @@ methods: {
                 if (res.rows.length < 10) {
                     this.allLoaded = true  //禁止上拉加载
                     this.isShow = false
-                    this.loadMore.prevent()
                 }
             }
         }).catch(error => {
