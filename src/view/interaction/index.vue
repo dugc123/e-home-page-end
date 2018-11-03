@@ -136,7 +136,7 @@ export default {
     stopProp(e) {
             e=e||event;
             e.stopPropagation()
-            e.preventDefult
+            e.preventDefult()
         },
         getForumList(){
             this.isShowLoading = true
@@ -144,7 +144,7 @@ export default {
             .then(res => {
                 this.isShowLoading = false
                 if (res.code == 1) {
-                    // this.allLoaded = false; // 可以进行上拉
+                    this.allLoaded = false; // 可以进行上拉
                     this.ForumList = res.rows
                     this.$refs.loadmore.onTopLoaded();
                 }
