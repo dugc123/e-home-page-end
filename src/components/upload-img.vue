@@ -6,6 +6,7 @@
         <input type="file" style="display:none" @change="upload"/>
         <img :src="img" v-if="img" class="IMg"/>
     </label>
+    
   </div>
 </template>
 <script>
@@ -35,15 +36,17 @@
           // 图片大于2MB
         }
         var reader = new FileReader();
-        reader.readAsDataURL(file);
+        // console.log(reader)
+        
+        reader.readAsDataURL(file);  //readAsDataURL方法会使用base-64进行编码
         reader.onload = function (e){
           // 读取到的图片base64 数据编码 将此编码字符串传给后台即可
-          var imgcode = e.target.result;
           // console.log(e)
+          var imgcode = e.target.result;
 
           var nativeCode=imgcode;
           // console.log(nativeCode)
-          
+
           imgcode=imgcode.split(",")[1];
           // console.log(imgcode) 
           let formData=new FormData();
@@ -55,7 +58,6 @@
           }
           })
         }
-
       }
     }
   }

@@ -55,23 +55,22 @@ export default {
   data() {
     return {
         ForumList:[],
-    //可以进行上拉
-    allLoaded: false,
-    //是否自动触发上拉函数
-    isAutoFill: false,
-    wrapperHeight: 0,
-    page: 1,
-    isShow:true,
-    isShowLoading:false,
-    isShowForm:false,
-    form:{
-        type: 1,
-        content:""
+        //可以进行上拉
+        allLoaded: false,
+        //是否自动触发上拉函数
+        isAutoFill: false,
+        wrapperHeight: 0,
+        page: 1,
+        isShow:true,
+        isShowLoading:false,
+        isShowForm:false,
+        form:{
+            type: 1,
+            content:""
+        },
+        };
     },
-    
-    };
-  },
-  methods: {
+    methods: {
         //   下拉刷新
     loadTop() {
         this.loadFrist();
@@ -136,7 +135,7 @@ export default {
     stopProp(e) {
             e=e||event;
             e.stopPropagation()
-            e.preventDefult()
+            e.preventDefault()
         },
         getForumList(){
             this.isShowLoading = true

@@ -64,7 +64,6 @@ const xhr = {
     post(url, data, config) {
       return this.fetch(url, data, config, 'post')
     }
-
 }
 
 export default xhr

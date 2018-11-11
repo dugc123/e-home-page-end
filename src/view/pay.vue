@@ -45,9 +45,6 @@ export default {
      showAlipay:false
  }
  },
- components: {
-
- },
  methods: {
     handleWeixin(){
         this.showWeixin = true

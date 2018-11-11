@@ -24,7 +24,6 @@ export default {
     title(){
         return this.$route.meta.title
     }
-
  }
 }
 </script>

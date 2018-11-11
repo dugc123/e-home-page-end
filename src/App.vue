@@ -15,7 +15,6 @@ export default {
   components:{
     tabs,
     ComHeader
-
   },
   computed: {
     isShowTabs(){
@@ -26,11 +25,11 @@ export default {
       }
     },
     ShowHeader(){
-       if (this.$route.name == "user" ||this.$route.name=="newsDetail"
-       ||this.$route.name == "know"||this.$route.name == "userinfo"
-       ||this.$route.name == "updateInfo"||this.$route.name == "pay"
-       ||this.$route.name == "integral"||this.$route.name == "ChangePassword"
-       ||this.$route.name == "interaction") {
+        if (this.$route.name == "user" ||this.$route.name=="newsDetail"
+        ||this.$route.name == "know"||this.$route.name == "userinfo"
+        ||this.$route.name == "updateInfo"||this.$route.name == "pay"
+        ||this.$route.name == "integral"||this.$route.name == "ChangePassword"
+        ||this.$route.name == "interaction") {
         return false
       }else{
         return true

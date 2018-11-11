@@ -20,19 +20,19 @@ export default {
  },
  methods:{
      getPhoto(){
-         this.isShowLoading = true
-    this.$axios.get(`/news/newsList.do`,{page:1,rows:10,type:7}).then(res=>{
-        if (res.code == 1) {
-            this.isShowLoading = false
-            this.PhotoList = res.rows
-            if (res.rows.length < 10) {
-                this.isShowText = true
+        this.isShowLoading = true
+        this.$axios.get(`/news/newsList.do`,{page:1,rows:10,type:7}).then(res=>{
+            if (res.code == 1) {
+                this.isShowLoading = false
+                this.PhotoList = res.rows
+                if (res.rows.length < 10) {
+                    this.isShowText = true
+                }
             }
-        }
-    }).catch(err=>{
-        this.isShowLoading = false
-    })
-}
+        }).catch(err=>{
+            this.isShowLoading = false
+        })
+    }
  },
  mounted () {
     this.getPhoto()
@@ -52,7 +52,6 @@ export default {
             height:2.8rem;
         }
         div{
-        
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp:2;

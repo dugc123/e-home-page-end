@@ -23,8 +23,8 @@ methods: {
         let date = new Date();
         let month = date.getMonth()+1;
         let day = date.getDate();
-        month = month<10?"0"+month:""+month;
-        day = day<10?"0"+day:""+day
+        month = month < 10 ? "0" + month : "" + month;
+        day = day < 10 ? "0" + day : "" + day
         let Url = getUrl(month,day)
         this.isShowLoading = true
         this.$axios.get("/proxy/proxy.do",{url:Url}).then(res=>{

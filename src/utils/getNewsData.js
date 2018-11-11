@@ -1,5 +1,4 @@
-
-    function getUrl(month, day) {
+function getUrl(month, day) {
       var vm = month;
       var vd = day;
 
