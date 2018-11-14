@@ -1,8 +1,8 @@
 <template>
  <div class="userinfo">
      <mt-header title="修改个人信息" fixed>
-        <router-link to="/userInfo" slot="left">
-            <mt-button icon="back"></mt-button>
+        <router-link to="#" slot="left">
+            <mt-button icon="back"  @click="handleClick"></mt-button>
         </router-link>
         <mt-button slot="right" @click="handleSave" >保存</mt-button>
     </mt-header>
@@ -106,7 +106,10 @@ export default {
                 imgURL:"",
             } 
     },
-    methods: {
+    methods: { 
+        handleClick(){
+            this.$router.back()
+        },
         getIMGURL(params){
             this.userInfo.header=params;
         },

@@ -2,7 +2,6 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -10,6 +9,10 @@ import 'swiper/dist/css/swiper.css'
 import $axios from  "./utils"
 import FastClick from "fastclick"
 import store from "./store/index"
+import router from './router'
+import Mui from 'vue-awesome-mui';
+
+Vue.use(Mui);
 
 Vue.use(VueAwesomeSwiper)
 Vue.use(MintUI)
@@ -52,5 +55,11 @@ new Vue({
   router,
   store,
   components: { App },
+  created () {
+    if (localStorage.getItem("isLogin") === false) {
+      localStorage.setItem("isLogin",'')
+    }
+    this.$store.state.userInfo = localStorage.getItem("info")
+  },
   template: '<App/>'
 })

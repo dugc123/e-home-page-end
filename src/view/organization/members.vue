@@ -94,7 +94,6 @@ created () {
 
 <style scoped lang="scss">
 .page{
-    overflow: scroll;
     font-size: 14px;
 }
 .userlist{

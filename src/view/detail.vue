@@ -1,7 +1,7 @@
 <template>
  <div class="detail">
     <div class="loading" v-if="isShowLoading"><img src="../../static/Spinner-1s-90px.svg"></div>
-          <mt-header :title="title" fixed>
+        <mt-header :title="title" fixed>
         <router-link to="#" slot="left">
             <mt-button icon="back" @click="handleIcon"></mt-button>
         </router-link>
@@ -78,12 +78,19 @@ mounted () {
 </script>
 
 <style scoped lang="scss">
+.mint-header{
+    background-color: #c50206;
+    height: 0.9rem;
+    .mint-header-title{
+        font-size: .4rem;
+    }
+}
 /deep/.detail{
     padding:1rem .1rem;
     h3{
         font-size: 22px;
         }
-         p{
+        p{
     width: 7.1rem;
     font-size: 14px;
     color:#333;

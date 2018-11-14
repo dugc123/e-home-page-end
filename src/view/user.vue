@@ -5,15 +5,15 @@
      </div>
     <div class="user-wrap">
             <div class="user-img">
-                <img :src="this.$store.state.userInfo.header" v-if='this.$store.state.userInfo.idCard'>
+                <img :src="this.$store.state.userInfo.header" v-if='this.$store.state.isLogin'>
                 <img src="../assets/bt_bg.png" v-else>
             </div>
             <router-link to="/login">
-            <div class="user-login"  v-if="!this.$store.state.userInfo.idCard">
+            <div class="user-login"  v-if="!this.$store.state.isLogin">
                 您还没有登录，请先登录
             </div>
             <div class="user-login"  v-else>
-               {{this.$store.state.userInfo.username}}
+                {{this.$store.state.userInfo.username}}
             </div>
         </router-link>
     </div> 
@@ -45,7 +45,7 @@
             <img class="user-info-img-right" src="../assets/right.png">
         </div>
     </router-link>
-            <mt-button class="logout" type="danger" v-if="this.$store.state.userInfo.idCard" @click="handleLogout">退出登录</mt-button>
+            <mt-button class="logout" type="danger" v-if="this.$store.state.isLogin" @click="handleLogout">退出登录</mt-button>
  </div>
 </template>
 
@@ -58,9 +58,9 @@ export default {
  methods: {
     handleLogout(){
                 this.$store.commit("CHANGE_userInfo","")   
-                localStorage.setItem("token","")   
+                this.$store.state.isLogin = false
+                localStorage.clear();
                 this.$router.push("/login")
-
     }
  },
  created () {

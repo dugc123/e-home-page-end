@@ -28,12 +28,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .mint-header{
     background-color: #c50206;
     height: 0.9rem;
     .mint-header-title{
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 </style>

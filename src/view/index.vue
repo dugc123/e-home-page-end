@@ -4,7 +4,7 @@
       <div class="header-left">
         <img src="../assets/logo.png" class="header-pic">
       </div>
-      <router-link to="/login" class="header-right" v-show="!this.$store.state.userInfo.idCard">
+      <router-link to="/login" class="header-right" v-show="!this.$store.state.isLogin">
         <i class="iconfont icon-icon"></i> 登录
       </router-link>
     </div>

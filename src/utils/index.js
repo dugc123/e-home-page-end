@@ -1,8 +1,8 @@
 import axios from "axios"
-// const env = process.env.NODE_ENV //在生产环境时，将会被设置为production
-// let baseURL = env == "development" ? "/api" : "/"
+const env = process.env.NODE_ENV //在生产环境时，将会被设置为production
+let baseURL = "http://211.67.177.56:8080/hhdj"
 import qs from "qs"
-const baseURL = "/api"
+
 const instance = axios.create({
   baseURL,
   timeout: 30000

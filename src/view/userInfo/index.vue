@@ -1,8 +1,8 @@
 <template>
  <div class="userinfo">
     <mt-header title="个人信息" fixed>
-    <router-link to="/user" slot="left" >
-        <mt-button icon="back"></mt-button>
+    <router-link to="#" slot="left" >
+        <mt-button icon="back"  @click="handleClick"></mt-button>
     </router-link>
     <mt-button slot="right" @click="handleEdit" >编辑</mt-button>
     </mt-header>
@@ -95,7 +95,10 @@ export default {
         },
         handleEdit(){
             this.$router.push("/updateInfo")
-        }
+        },
+    handleClick(){
+        this.$router.back()
+    }
     },
     created () {
         this.getUserInfo()

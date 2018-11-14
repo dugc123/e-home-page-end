@@ -1,10 +1,5 @@
 <template>
 <div class="page container">
-     <mt-header title="个人量化积分" fixed>
-    <router-link to="/user" slot="left" >
-        <mt-button icon="back"></mt-button>
-    </router-link>
-    </mt-header>
     <div class="wrap">
         {{this.$store.state.userInfo.totalScore}}
     </div>
@@ -178,6 +173,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .wrap{
     height:2.8912rem;
     line-height:2.8912rem;

@@ -1,10 +1,5 @@
 <template>
  <div class="page container">
-    <mt-header title="修改密码" fixed>
-    <router-link to="/user" slot="left" >
-        <mt-button icon="back"></mt-button>
-    </router-link>
-    </mt-header>
      <div class="wrap">
         <div>旧密码：</div>
         <input type="password" v-model="formData.oldPwd">
@@ -28,13 +23,16 @@ return {
     }
 }
 },
-components: {
-
-}
+ methods: {
+    handleClick(){
+        this.$router.back()
+    }
+ }
 }
 </script>
 
 <style scoped lang="scss">
+
 .wrap{
     width:6rem;
     height:6.1rem;

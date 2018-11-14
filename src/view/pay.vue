@@ -1,10 +1,5 @@
 <template>
  <div class="page container">
-    <mt-header title="个人量化积分" fixed>
-    <router-link to="/user" slot="left" >
-        <mt-button icon="back"></mt-button>
-    </router-link>
-    </mt-header>
 <div class="text">
     请选择支付方式
 </div>
@@ -55,7 +50,10 @@ export default {
      },
      handleAlipay(){
         this.showAlipay = true
-     }
+     },
+    handleClick(){
+        this.$router.back()
+    }
  }
 }
 </script>

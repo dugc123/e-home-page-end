@@ -27,9 +27,7 @@ export default {
     ShowHeader(){
         if (this.$route.name == "user" ||this.$route.name=="newsDetail"
         ||this.$route.name == "know"||this.$route.name == "userinfo"
-        ||this.$route.name == "updateInfo"||this.$route.name == "pay"
-        ||this.$route.name == "integral"||this.$route.name == "ChangePassword"
-        ||this.$route.name == "interaction") {
+        ||this.$route.name == "updateInfo") {
         return false
       }else{
         return true

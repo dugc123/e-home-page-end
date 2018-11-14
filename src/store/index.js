@@ -26,7 +26,8 @@ const store = new Vuex.Store({
       totalScore: "",
       username: "",
       wxNum: "",
-    }
+    },
+    isLogin:false
   },
   mutations: {
     "CHANGE_userInfo"(state, payload) {
