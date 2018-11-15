@@ -1,7 +1,7 @@
 <template>
 <div class="page container">
     <div class="wrap">
-        {{this.$store.state.userInfo.totalScore}}
+        {{totalScore}}
     </div>
     <div class="jifen">
         <img src="../../assets/积分明细icon.png" class="icon-left">
@@ -12,150 +12,150 @@
         积分规则
         <img src="../../assets/wenhao.png" >
     </div>
-   <div class="integral">
-       <div class="left-text">
-           登录APP
-       </div>
-       <div class="right-integral">
-           5
-       </div>
-   </div>
     <div class="integral">
-       <div class="left-text">
-           完善个人信息
-       </div>
-       <div class="right-integral">
-           2
-       </div>
-   </div>
-    <div class="integral">
-       <div class="left-text">
-           查看积分
-       </div>
-       <div class="right-integral">
-           1
-       </div>
-   </div>
-     <div class="integral">
-       <div class="left-text">
-           按时缴纳党费
-       </div>
-       <div class="right-integral">
-           10
-       </div>
-   </div>
-    <div class="integral">
-       <div class="left-text">
-           查看通知
-       </div>
-       <div class="right-integral">
-           2
-       </div>
-   </div>
-    <div class="integral">
-       <div class="left-text">
-           了解学院工作动态
-       </div>
-       <div class="right-integral">
-           5
-       </div>
-   </div>
-    <div class="integral">
-       <div class="left-text">
-          上交思想汇报经审核通过
-       </div>
-       <div class="right-integral">
-           5
-       </div>
-   </div>
-    <div class="integral">
-       <div class="left-text">
-           主动学习相关文件
-       </div>
-       <div class="right-integral">
-           10
-       </div>
-   </div>
-    <div class="integral">
-       <div class="left-text">
-           认真撰写心得总结并上交，经审核通过
-       </div>
-       <div class="right-integral">
-           5
-       </div>
-   </div>
-    <div class="integral">
-       <div class="left-text">
-           提交个人总结，并参与评议
-       </div>
-       <div class="right-integral">
-           2
-       </div>
-   </div>
-    <div class="integral">
-       <div class="left-text">
-           积极参与互动
-       </div>
-       <div class="right-integral">
-           5
-       </div>
-   </div>
-      <div class="integral">
-       <div class="left-text">
-           学习党建知识
-       </div>
-       <div class="right-integral">
-           5
-       </div>
-   </div>
-      <div class="integral">
-       <div class="left-text">
-           学习党史
-       </div>
-       <div class="right-integral">
-           10
-       </div>
-   </div>
-      <div class="integral">
-       <div class="left-text">
-           创先争优事迹
-       </div>
-       <div class="right-integral">
-           10
-       </div>
-   </div>
-      <div class="integral">
-       <div class="left-text">
-           学党章，学习近平总书记系列讲话
-       </div>
-       <div class="right-integral">
-           10
-       </div>
-   </div>
-      <div class="integral">
-       <div class="left-text">
-           用镜头记录两学一做过程中令人感动的人和事
-       </div>
-       <div class="right-integral">
-           3
-       </div>
-   </div>
-     <div class="integral">
-       <div class="left-text">
-           关注并积极参与特色活动
-       </div>
-       <div class="right-integral">
-           5
-       </div>
-   </div>
-     <div class="integral">
-       <div class="left-text">
-           制度化、常态化建设
-       </div>
-       <div class="right-integral">
-           5
-       </div>
-   </div>
+        <div class="left-text">
+            登录APP
+        </div>
+        <div class="right-integral">
+            5
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            完善个人信息
+        </div>
+        <div class="right-integral">
+            2
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            查看积分
+        </div>
+        <div class="right-integral">
+            1
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            按时缴纳党费
+        </div>
+        <div class="right-integral">
+            10
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            查看通知
+        </div>
+        <div class="right-integral">
+            2
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            了解学院工作动态
+        </div>
+        <div class="right-integral">
+            5
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            上交思想汇报经审核通过
+        </div>
+        <div class="right-integral">
+            5
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            主动学习相关文件
+        </div>
+        <div class="right-integral">
+            10
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            认真撰写心得总结并上交，经审核通过
+        </div>
+        <div class="right-integral">
+            5
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            提交个人总结，并参与评议
+        </div>
+        <div class="right-integral">
+            2
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            积极参与互动
+        </div>
+        <div class="right-integral">
+            5
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            学习党建知识
+        </div>
+        <div class="right-integral">
+            5
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            学习党史
+        </div>
+        <div class="right-integral">
+            10
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            创先争优事迹
+        </div>
+        <div class="right-integral">
+            10
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            学党章，学习近平总书记系列讲话
+        </div>
+        <div class="right-integral">
+            10
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            用镜头记录两学一做过程中令人感动的人和事
+        </div>
+        <div class="right-integral">
+            3
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            关注并积极参与特色活动
+        </div>
+        <div class="right-integral">
+            5
+        </div>
+    </div>
+        <div class="integral">
+        <div class="left-text">
+            制度化、常态化建设
+        </div>
+        <div class="right-integral">
+            5
+        </div>
+    </div>
 </div>
 </template>
 
@@ -163,12 +163,21 @@
 export default {
  data() {
  return {
-
+        totalScore:''
  }
  },
- components: {
-
- }
+ methods:{
+    getUserInfo(){
+        this.$axios.get(`/user/userInfo.do`).then(res=>{
+            if (res.code == 1) {
+                this.totalScore = res.data.totalScore
+            }
+        })
+        }
+ },
+mounted () {
+    this.getUserInfo()
+}
 }
 </script>
 

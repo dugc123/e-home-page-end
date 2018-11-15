@@ -56,9 +56,6 @@ new Vue({
   store,
   components: { App },
   created () {
-    if (localStorage.getItem("isLogin") === false) {
-      localStorage.setItem("isLogin",'')
-    }
     this.$store.state.userInfo = localStorage.getItem("info")
   },
   template: '<App/>'
