@@ -4,7 +4,7 @@
       <div class="header-left">
         <img src="../assets/logo.png" class="header-pic">
       </div>
-      <router-link to="/login" class="header-right" v-show="!this.$store.state.isLogin">
+      <router-link to="/login" class="header-right" v-show="!isLogin">
         <i class="iconfont icon-icon"></i> 登录
       </router-link>
     </div>
@@ -84,7 +84,8 @@ export default {
             autoplay: 3000
         },
         swiperList:[],
-        isShowLogin:true
+        isShowLogin:true,
+        isLogin:localStorage.getItem("token")
  }
  },
 methods: {

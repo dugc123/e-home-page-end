@@ -26,8 +26,8 @@ const store = new Vuex.Store({
       totalScore: "",
       username: "",
       wxNum: "",
-    },
-    isLogin:false
+      idCard: ""
+    }
   },
   mutations: {
     "CHANGE_userInfo"(state, payload) {
@@ -41,9 +41,9 @@ const store = new Vuex.Store({
         setItem: (key, value) =>
           sessionStorage.setItem(key, value),
         removeItem: key => sessionStorage.removeItem(key),
-      },
-    }),
-  ],
+      }
+    })
+  ]
 })
 
 export default store

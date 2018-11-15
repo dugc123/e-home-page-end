@@ -42,7 +42,6 @@ export default {
                 if (res.code == 1) {
                     Indicator.close();
                     this.$store.commit("CHANGE_userInfo",res.data) 
-                    this.$store.state.isLogin = true
                     localStorage.setItem("token",res.token) 
                     localStorage.setItem("info",res.data) 
                     if(this.$route.query.redirect){
